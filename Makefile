@@ -11,8 +11,7 @@ clean:
 
 $(EXENAME): $(SRCS)
 
-	mkdir build
+	mkdir -p build
 	$(GCC) $^ -lm -o $(EXENAME)
-	$(EXENAME)
 
 rebuild: clean $(EXENAME)
