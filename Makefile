@@ -1,11 +1,18 @@
 GCC=gcc
 FLAGS=-Wall -Wextra -Werror
+EXENAME=build/calc.out
+SRCS=src/*.c
 
-all: src/calculator.c src/polish_notation.c src/stack.c
-
-	$(GCC) $^ -lm -o build/calc.out
-	build/calc.out
+all: $(EXENAME)
 
 clean:
 
-	@rm -f build/*.out build/*.o
+	@rm -rf $(EXENAME) build
+
+$(EXENAME): $(SRCS)
+
+	mkdir build
+	$(GCC) $^ -lm -o $(EXENAME)
+	$(EXENAME)
+
+rebuild: clean $(EXENAME)
