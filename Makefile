@@ -1,10 +1,11 @@
 GCC=gcc
 FLAGS=-Wall -Wextra -Werror
 
-all: calculatorAsin.c polish_notation.c stack.c
+all: src/calculator.c src/polish_notation.c src/stack.c
 
-	$(GCC) $^ -lm
-	./a.out
+	$(GCC) $^ -lm -o build/calc.out
+	build/calc.out
 
 clean:
-	@rm -f *.out *.o
+
+	@rm -f build/*.out build/*.o

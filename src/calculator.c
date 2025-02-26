@@ -3,8 +3,9 @@
 #include <string.h>
 #include <ctype.h>
 #include <math.h>
-#include "stack.h"
-#include "polish_notation.h"
+
+#include "../include/stack.h"
+#include "../include/polish_notation.h"
 
 #define WIDTH 80
 #define HEIGHT 25

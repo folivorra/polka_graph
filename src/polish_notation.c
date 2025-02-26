@@ -1,4 +1,4 @@
-#include "polish_notation.h"
+#include "../include/polish_notation.h"
 
 char* to_polish(char* sep_formula, int count) {
     char* polish = malloc(strlen(sep_formula));
