@@ -56,7 +56,7 @@ int main() {
 
     int count_col = 0;
 
-    for (double x = 0; x <= 4.0 * PI; x += 4.0 * PI / 79) {
+    for (double x = 0; x <= 4.0 * PI; x += 4.0 * PI / 79.9) {
         double res = from_polish(x, polish);
         int y = round(res * 12); 
         
